@@ -13,7 +13,7 @@ const { imgUrl, text, author, jobTitle} = Astro.props.testimonial;
 
 ---
 <div class="flex flex-col justify-between items-center w-[327px] lg:w-[350px] h-[288px] lg:h-[350px]">
-  <img src={imgUrl} class="w-[72px] h-[72px] rounded-[50%]"/>
+  <img alt="avatar" src={imgUrl} class="w-[72px] h-[72px] rounded-[50%]"/>
   <p class="text-cadet text-base font-medium leading-8 text-center tracking-[-0.13px]">{text}</p>
   <div class="flex flex-col justify-center items-center">
     <div class="text-baltic text-base font-serif font-black tracking-[-0.13px] mb-2">{author}</div>
