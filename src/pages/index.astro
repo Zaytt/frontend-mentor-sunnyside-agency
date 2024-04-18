@@ -1,0 +1,115 @@
+---
+import LearnMore from '../components/LearnMore.astro';
+import NavBar from '../components/NavBar.astro';
+import Testimonial from '../components/Testimonial.astro';
+import IconArrowDown from '../components/icons/IconArrowDown.astro';
+import IconFacebook from '../components/icons/IconFacebook.astro';
+import IconInstagram from '../components/icons/IconInstagram.astro';
+import IconPinterest from '../components/icons/IconPinterest.astro';
+import IconTwitter from '../components/icons/IconTwitter.astro';
+import Logo from '../components/icons/Logo.astro';
+import Layout from '../layouts/Layout.astro';
+import '../style.css'
+import testimonials from '../testimonials.json'
+---
+<Layout title='Sunnyside agency' >
+	<main>
+		<div class="flex justify-center bg-[black]">
+			<div class="max-w-[640px] lg:max-w-[1440px] w-full">
+				<!-- 1st row desktop -->
+				<div class="col-span-2 size-full bg-[url('/images/mobile/image-header.jpg')] lg:bg-[url('/images/desktop/image-header.jpg')] bg-bottom lg:bg-center bg-cover h-[538px] lg:w-full lg:min-h-[800px] flex items-center flex-col relative">
+					<NavBar />
+					<h1 class="text-white font-serif tracking-[6.25px] lg:tracking-[8.75px] font-black text-[40px] lg:text-[56px] mt-[128px] lg:mt-[195px] mb-[40px] lg:mb-[74px] text-center px-10">
+						WE ARE CREATIVES
+					</h1>
+					<IconArrowDown />
+				</div>
+				<!-- 2nd row desktop -->
+				<div class="flex lg:flex-row flex-col-reverse justify-between ">
+					<div class="w-full lg:w-6/12 flex flex-col items-center justify-center bg-white py-[64px] lg:py-[160px]">
+						<div class="lg:w-[445px] w-[327px] h-auto flex flex-col items-center lg:items-start">
+							<div class="font-serif text-baltic text-[32px] lg:text-[40px] font-black tracking-[-.29px] mb-8 text-center lg:text-left">
+								Transform your brand
+							</div>
+							<p class="text-steel font-semibold text-base tracking-[-.13px] mb-[40px] text-center lg:text-left">
+								We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+							</p>
+							<LearnMore color='bg-cyberyellow'/>
+						</div>
+						
+					</div>
+					<img src='/images/desktop/image-transform.jpg' class="w-full lg:w-6/12 h-auto"/>
+				</div>
+				<!-- 3rd row desktop -->
+				<div class="flex lg:flex-row flex-col justify-between ">
+					<img src='/images/desktop/image-stand-out.jpg' class="w-full lg:w-6/12 h-auto"/>
+					<div class="w-full lg:w-6/12 flex flex-col items-center justify-center bg-white py-[64px] lg:py-[160px]">
+						<div class="lg:w-[445px] w-[327px] h-auto flex flex-col items-center lg:items-start">
+							<div class="font-serif text-baltic text-[32px] lg:text-[40px] font-black tracking-[-.29px] mb-8 text-center lg:text-left">
+								Stand out to the right audience
+							</div>
+							<p class="text-steel font-semibold text-base tracking-[-.13px] mb-[40px] text-center lg:text-left">
+								Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+							</p>
+							<LearnMore color='bg-coral'/>
+						</div>
+					</div>
+				</div>
+				<!-- 4th row desktop -->
+				<div class="bg-[url('/images/desktop/image-graphic-design.jpg')] bg-top bg-cover bg-no-repeat h-[600px] flex flex-col justify-end items-center pb-[86px]">
+					<div class="font-serif font-black text-plantation text-[28px] tracking-[0.2px] mb-8">
+						Graphic Design
+					</div>
+					<p class="font-medium text-fadedjade text-[16px] tracking[-0.11px] w-[340px] text-center leading[27px]">
+						Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+					</p>
+				</div>
+				<div class="bg-[url('/images/desktop/image-photography.jpg')] bg-top bg-cover bg-no-repeat h-[600px] flex flex-col justify-end items-center pb-[86px]">
+					<div class="font-serif font-black text-firefly text-[28px] tracking-[0.2px] mb-8 opacity-75">
+						Photography
+					</div>
+					<p class="font-medium text-saphire text-[16px] tracking[-0.11px] w-[340px] text-center leading[27px]">
+						Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+					</p>
+				</div>
+				<!-- Testimonials -->
+				<div class="py-[64px] lg:py-[160px] bg-white">
+					<div class="flex flex-col items-top justify-center">
+						<div class="font-serif font-black text-aluminium text-[20px] tracking-[5px] text-center mb-20">
+							CLIENT TESTIMONIALS
+						</div>
+						<div class="flex flex-col lg:flex-row items-center lg:justify-center gap-x-5 gap-y-16 px-10">
+							{testimonials.map(testimonial=> <Testimonial testimonial={testimonial}/>)}
+						</div>
+					</div>
+				</div>
+				<!-- Gallery -->
+				<div >
+					<div class="flex flex-wrap">
+						<img src='/images/desktop/image-gallery-milkbottles.jpg' class="w-6/12 lg:w-3/12 aspect-square lg:aspect-auto"/>
+						<img src='/images/desktop/image-gallery-orange.jpg' class="w-6/12 lg:w-3/12 aspect-square lg:aspect-auto"/>
+						<img src='/images/desktop/image-gallery-cone.jpg' class="w-6/12 lg:w-3/12 aspect-square lg:aspect-auto"/>
+						<img src='/images/desktop/image-gallery-sugarcubes.jpg' class="w-6/12 lg:w-3/12 aspect-square lg:aspect-auto"/>
+					</div>
+				</div>
+				<!-- Footer -->
+				<div class="bg-aqua col-span-2">
+					<div class="h-[350px] py-[72px] flex flex-col items-center">
+						<Logo color='green'/>
+						<div class="w-[300px] flex justify-between mt-10 mb-[84px] text-viridian text-base font-semibold tracking-[-0.13px]">
+							<button>About</button>
+							<button>Services</button>
+							<button>Projects</button>
+						</div>
+						<div class="w-[164px] flex justify-between">
+							<button><IconFacebook /></button>
+							<button><IconInstagram /></button>
+							<button><IconTwitter /></button>
+							<button><IconPinterest /></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout
