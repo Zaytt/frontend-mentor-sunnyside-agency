@@ -1,10 +1,6 @@
 ---
 import IconHamburger from "./icons/IconHamburger.astro";
 import Logo from "./icons/Logo.astro";
-
-
-
-
 ---
 <script>
   let toggleMenu = false;
@@ -35,7 +31,9 @@ import Logo from "./icons/Logo.astro";
     </div>
   </div>
   <div class="w-full flex justify-between items-center px-10 pt-9 absolute">
-    <div class="w-[124px] h-[24px]"><Logo color="white"/></div>
+    <div class="lg:w-[170px] w-[124px] lg:h-[33px] h-[24px]">
+      <Logo color="white"/>
+    </div>
     <div class="lg:hidden">
       <button id="hamburger">
         <IconHamburger />
